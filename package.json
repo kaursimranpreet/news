@@ -1,0 +1,52 @@
+{
+  "name": "newsapidemo",
+  "version": "1.0.0",
+  "description": "demo for the news api",
+  "main": "index.js",
+  "scripts": {
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm run dev",
+    "server": "nodemon starter.js",
+    "start": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
+    "heroku-postbuild": "npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.16.3",
+    "moment": "^2.22.2",
+    "newsapi": "^2.4.0",
+    "path": "^0.12.7",
+    "react": "^16.5.2",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.5.2",
+    "react-loading": "^2.0.3",
+    "react-router": "^3.2.1",
+    "react-scripts": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "concurrently": "^4.1.2",
+    "nodemon": "^2.0.22"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "keywords": [
+    "node",
+    "express",
+    "heroku"
+  ],
+  "proxy": "http://localhost:5000"
+}
